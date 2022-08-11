@@ -30,5 +30,10 @@ makeBetweenFunc(0, 18)
 const isChild = makeBetweenFunc(0, 18);
 console.log(isChild(18));
 
-//
+// callback functions
+setTimeout(
+    function() {
+        console.log('Hello');
+    }, 2000
+)
 
