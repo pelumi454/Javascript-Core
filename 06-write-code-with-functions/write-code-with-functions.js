@@ -50,3 +50,24 @@ function isPangram(sentence) {
     }
     return true;
 }
+
+// exercise 4
+function getCard() {
+ const values = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+    // const idx = Math.floor(Math.random() * values.length);
+//    const value = values[idx];
+    const value = pickItem(values);
+    const suits = ['clubs', 'diamonds', 'hearts', 'spades'];
+    // const idx2 = Math.floor(Math.random() * suits.length);
+    // const suit = suits[idx2];
+    const suit = pickItem(suits); 
+    return {
+        value: value || pickItem(values),
+        suit: suit || pickItem(suits)
+    }
+}
+// or you can write a function that returns the index of items in an array and call the function
+function pickItem(arr) {
+    const idx = Math.floor(Math.random() * arr.length);
+    return arr[idx];
+}
