@@ -10,11 +10,6 @@ document.querySelector('#main');
 // To find the first li with the class of special, nested inside of a ul, nested inside a section:
 document.querySelector('section ul li.special');
 
-
-// ****************
-// querySelectorAll
-// ****************
-
 // To find ALL li's on the page:
 document.querySelectorAll('li');
 
