@@ -1,6 +1,3 @@
-// ****************
-// querySelector
-// ****************
 //To find the first li on the page:
 document.querySelector('li');
 
