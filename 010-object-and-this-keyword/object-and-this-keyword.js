@@ -17,3 +17,9 @@ team[role] = person;
 // }
 
 // methods are functions that are attached to objects
+const math = {
+    add: function (a,b) {
+        return a + b;
+    }
+}
+// math.add(1,2)
