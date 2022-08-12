@@ -127,7 +127,7 @@ const myDeck = {
       for (let i = deck.length - 1; i > 0; i--) {
         // pick a random index before current element
           let j = Math.floor(Math.random() * (i + 1));
-          // swap 
+          // swap elements
       [deck[i], deck[j]] = [deck[j], deck[i]];
     }
   },
