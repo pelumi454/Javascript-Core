@@ -35,3 +35,21 @@ const moveX = (element, amount, delay) => {
   }, delay);
 };
 moveX(btn, 100, 1000);
+
+
+// promises
+const willGetYouADog = new Promise((resolve, reject) => { 
+    const rand = Math.random();
+    if (rand > 0.5) {
+        resolve();
+    }
+    else { 
+        reject();
+    }
+});
+willGetYouADog.then(() => {
+    console.log("You got a dog!");
+});
+willGetYouADog.catch(() => { 
+    console.log("You didn't get a dog.");
+});
