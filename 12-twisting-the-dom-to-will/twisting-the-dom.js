@@ -99,3 +99,15 @@ const isWinner = ({ homeTeam, awayTeam }, targetTeam) => {
   const target = homeTeam.team === targetTeam ? homeTeam : awayTeam;
   return target.isWinner;
 };
+const getScoreLine = ({ homeTeam, awayTeam }) => {
+  const { team: hTeam, points: hPoints } = homeTeam;
+  const { team: aTeam, points: aPoints } = awayTeam;
+  const teamNames = `${aTeam} @ ${hTeam}`;
+  let scoreLine;
+  if (aPoints > hPoints) {
+    scoreLine = `<b>${aPoints}</b>-${hPoints}`;
+  } else {
+    scoreLine = `${aPoints}-<b>${hPoints}</b>`;
+  }
+  return `${teamNames} ${scoreLine}`;
+};
