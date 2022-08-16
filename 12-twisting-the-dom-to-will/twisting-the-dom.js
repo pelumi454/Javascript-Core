@@ -95,3 +95,7 @@ const makeChart = (games, targetTeam) => {
   }
   return ulParent;
 };
+const isWinner = ({ homeTeam, awayTeam }, targetTeam) => {
+  const target = homeTeam.team === targetTeam ? homeTeam : awayTeam;
+  return target.isWinner;
+};
