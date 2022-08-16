@@ -26,3 +26,12 @@ console.log("HELLO!");
 
 makeRant("I hate mayonnaise", document.body);
 // makeRant('if you have to cough, please cover your mouth', document.body);
+
+//
+btn = document.querySelector("button");
+const moveX = (element, amount, delay) => {
+    setTimeout(() => {
+      element.style.transform = `translateX(${amount}px)`;
+  }, delay);
+};
+moveX(btn, 100, 1000);
