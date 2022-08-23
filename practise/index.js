@@ -3,19 +3,25 @@ const startButton = document.querySelector("#start");
 const pauseButton = document.querySelector("#pause");
 
 startButton.addEventListener("click", () => {
-    start();
+  start();
 });
 
 function startTicking() {
-    const timerValue = (durationInput.value - 1)
-    console.log(timerValue)
+  const timerValue = durationInput.value;
+  durationInput.value = timerValue - 1;
+  if (timerValue <= 0) {
+    pause;
+  }
 }
 
-function start(){
-    timer = setInterval(()=>startTicking(), 1000)
+function start() {
+  timer = setInterval(() => startTicking(), 1000);
 }
 
-pauseButton.addEventListener('click', () => {
-    clearInterval(timer)
-})
+pauseButton.addEventListener("click", () => {
+  clearTick();
+});
 
+function clearTick() {
+  clearInterval(timer);
+}
